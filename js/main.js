@@ -38,14 +38,26 @@ app.controller("Locations", function ($scope){
     }
 
 
-  //scope out places to render
+  //places array, seed two, add with form submit
   $scope.places = [ vailPlace, parkcityPlace];
-
-  $scope.showForm = false;
-
-  $scope.submitNew = function () {
-    console.log('test submit')
-    $scope.showForm = true;
+  // $scope.showForm = true;
+  $scope.hide = true;
+  $scope.save =  function (user) {
+    var place = {
+                  'location' : $scope.location,
+                  'author': $scope.author,
+                  'image': $scope.image,
+                  'description': $scope.description,
+                  'posted': new Date (),
+                  'comments': [],
+                  'votes': 0,
+                  };
+    $scope.places.push(place);
+    // console.log(place);
+    // console.log($scope.places);
+    //hide submit form on submit
+    $scope.hide = true;
+    $scope.showForm = false;
   }
 
 })
