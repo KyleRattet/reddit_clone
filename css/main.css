@@ -1,1 +1,44 @@
 /* add custom styles */
+
+
+
+
+.place-wrapper {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  width: 95%;
+  min-height: 300px;
+  margin: auto;
+  margin-bottom: 15px;
+  clear: both;
+  border: gray solid thin;
+}
+
+.image-section {
+  padding: 20px;
+  float:left;
+  width: 20%;
+}
+
+.content-section {
+  float:right;
+  width: 75%;
+}
+
+.author-section {
+  float: right;
+  margin-right: 20px;
+}
+
+.description-section {
+    margin-top: 75px;
+}
+
+/*color classes for up or down votes*/
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
