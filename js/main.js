@@ -1,4 +1,8 @@
-var app = angular.module("reddit", []);
+var app = angular.module("reddit", ['ngAnimate', 'angularMoment']);
+
+app.run(function(amMoment) {
+    amMoment.changeLocale('de');
+});
 
 app.controller("Locations", function ($scope){
 
