@@ -14,6 +14,18 @@
   border: gray solid thin;
 }
 
+.form-section {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  width: 95%;
+  min-height: 300px;
+  margin: auto;
+  margin-bottom: 15px;
+  clear: both;
+  border: gray solid thin;
+  padding: 5px;
+}
+
 .image-section {
   padding: 20px;
   float:left;
@@ -31,7 +43,12 @@
 }
 
 .description-section {
-    margin-top: 75px;
+  margin-top: 75px;
+}
+
+.comment-section {
+  max-height: 100px;
+
 }
 
 /*color classes for up or down votes*/

@@ -37,12 +37,12 @@ app.controller("Locations", function ($scope){
             ],
     }
 
-
+  $scope.sort = '-votes';
   //places array, seed two, add with form submit
   $scope.places = [ vailPlace, parkcityPlace];
   // $scope.showForm = true;
   $scope.hide = true;
-  $scope.save =  function (user) {
+  $scope.save =  function () {
     var place = {
                   'location' : $scope.location,
                   'author': $scope.author,
@@ -53,12 +53,40 @@ app.controller("Locations", function ($scope){
                   'votes': 0,
                   };
     $scope.places.push(place);
-    // console.log(place);
+    console.log(place);
     // console.log($scope.places);
     //hide submit form on submit
     $scope.hide = true;
     $scope.showForm = false;
   }
+
+  $scope.newComment= function  (commentName, commentText, thisLocation) {
+    console.log("test add comment button");
+
+    var commentSubmit = {
+                    name : commentName,
+                    comment : commentText,
+                  }
+
+    console.log(commentSubmit);
+
+    //need to push new comment into correct location comment section
+    //need to find how to push to right index
+    console.log($scope.places[0].location)
+
+    for (var i = 0; i < $scope.places.length; i++) {
+       if($scope.places[i].location === thisLocation) {
+        index = i;
+        console.log(index);
+        $scope.places[i].comments.push(commentSubmit);
+       }
+        console.log($scope.places[i]);
+    };
+
+
+  }
+
+
 
 })
 
